@@ -191,7 +191,8 @@ footer{
     background-position: center;
 }
 .contFooter{
-    background-color: rgba(254, 205, 34,0.85);
+    background-color: rgba(29, 25, 52, 0.85);
+    color: white;
 }
 .hPatrocinadores{
     text-align: center;
@@ -235,6 +236,7 @@ footer{
     padding: 50px;
 }
 .contPresentacion div{
+
 }
 .verdeClarito{
     background-color: #19988b;
@@ -245,7 +247,10 @@ footer{
     color: white;
 }
 .contImgPresentación{
-    display: flex;    
+    display: flex;  
+    max-height: 400px;  
+    align-content: center;
+    
 }
 .contImgPresentación img{
     transition: 1000ms;
@@ -259,4 +264,11 @@ footer{
     width: 800px;
     opacity: 1;
     filter: contrast(120%);
+}
+.contacto{
+    background-color: #1d1934;
+    color: white;
+    padding: 45px;
+    padding-left: 25%;
+    padding-right: 25%;
 }
