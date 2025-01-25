@@ -18,6 +18,12 @@ body {
     grid-template-columns: 45% 55%;
     background-color: black;
 }
+.encabezadoGaleria{
+    margin: 0;
+    display: grid;
+    background-color: #1d1934;
+}
+
 
 .encabezado section {
     background-color: rgba(0, 0, 0, 0.4);
@@ -272,3 +278,54 @@ footer{
     padding-left: 25%;
     padding-right: 25%;
 }
+
+.galerias{
+    background-color: #1d1934;
+    padding: 2% 5%;
+}
+.fondoContGaleria{
+    background-color: black;
+    margin-top: 15px;
+}
+.contGaleria{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding:  5%;
+    color:#ffffff;
+    text-align: center;
+    align-items: center;
+}
+.contGaleria article{
+    padding: 50px;
+}
+.contGaleria p{
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+.contImgGaleria{
+    margin: 60px;
+    height: 100%;
+    border: 10px solid white;
+    border-bottom: 60px solid white;
+    transition: 1000ms;
+    
+}
+.backAfiche{
+    background-image: url(../imgs/afiches.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.contImgGaleria:hover{
+    transition: 500ms;
+    
+    transform: scale(1.2) rotate(-25deg);
+    
+}
+.bordeDerecho{
+    
+    border-right:dotted #ffffff 5px ;
+}
+
+
