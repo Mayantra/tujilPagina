@@ -18,7 +18,8 @@ body {
     grid-template-columns: 45% 55%;
     background-color: black;
 }
-.encabezadoGaleria{
+
+.encabezadoGaleria {
     margin: 0;
     display: grid;
     background-color: #1d1934;
@@ -27,7 +28,7 @@ body {
 
 .encabezado section {
     background-color: rgba(0, 0, 0, 0.4);
-    padding-bottom: 125px;
+
 }
 
 .contImg {
@@ -36,7 +37,7 @@ body {
 }
 
 .contImg img {
-    max-width: 50%;
+    max-width: 65%;
 }
 
 
@@ -68,7 +69,7 @@ body {
     /* Texto en negrita */
 }
 
-.menu a:hover{
+.menu a:hover {
     border: 1px solid white;
     border-radius: 5px;
     background-color: white;
@@ -78,12 +79,18 @@ body {
 
 
 .mensajePrincipal {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 
     color: white;
     margin: 50px;
-    padding: 40px;
-    
+    padding: 50px;
+
+}
+
+.mensajePrincipal h1 {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 25px;
 }
 
 
@@ -103,28 +110,32 @@ body {
 
 .logoPrincipal {
     padding: 35px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
 }
 
 
 
-.contRedes{
+.contRedes {
     background-color: black;
     display: flex;
     text-align: center;
 }
-.redes a{
+
+.redes a {
     text-decoration: none;
     /* Elimina el subrayado de los enlaces */
     color: white;
     font-size: 42px;
 }
-.contRedes a{
+
+.contRedes a {
     margin: 5px;
     padding: 10px;
     flex-grow: 1;
 }
-.contRedes a:hover{
+
+.contRedes a:hover {
     color: black;
     background-color: white;
     transition-duration: 500ms;
@@ -145,16 +156,57 @@ body {
 
 .pPrincipal {
     font-weight: 300;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.contCulturaLugar{
+    display: grid;
+    grid-template-rows: 35% 65%;
+
+}
+
+
+.contInfoCalendario {
+    text-decoration: none;
+    color: white;
+    transition: 1000ms;
+}
+
+.contInfoCalendario:hover {
+    transition: 500ms;
+    transform: scale(1.1);
 }
 
 .infoCalendario {
     text-align: right;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     color: white;
-    padding: 75px;
+    padding: 50px;
     background-color: rgba(0, 110, 99);
-    
+    margin-bottom: 15px;
 }
 
+.contLocation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+}
+
+.contLocation h1 {
+    font-size: 30px;
+}
+
+.contLocation img {
+    margin: 10px;
+}
+
+.diasCont {
+    font-size: 30px;
+    font-weight: 300;
+}
 
 
 
@@ -162,6 +214,28 @@ body {
     padding: 20px;
     background-color: rgba(177, 32, 41);
     color: #ffffff;
+    text-align: center;
+    align-content: center;
+}
+.infoCultura h2{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 40px;
+}
+.PrimerParrafoCultura{
+    margin-top: 35px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: #ffffff 2px solid;
+}
+.PrimerParrafoCultura p{
+    font-weight: 600;
+}
+.segundoParrafoCultura{
+    text-align: justify;
+    font-weight: 300;
+    font-size: small;    
 }
 
 .artSecundario {
@@ -184,28 +258,31 @@ body {
     margin: 5px;
 }
 
-.imgVertical1{
+.imgVertical1 {
     background-image: url(../imgs/barrilete1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-footer{
+footer {
     background-image: url(../imgs/sombreros.jpg);
     background-size: cover;
     background-position: center;
 }
-.contFooter{
+
+.contFooter {
     background-color: rgba(29, 25, 52, 0.85);
     color: white;
 }
-.hPatrocinadores{
+
+.hPatrocinadores {
     text-align: center;
     margin: 25px;
     padding: 25px;
 }
-.patrocinadores{
+
+.patrocinadores {
     display: flex;
     justify-content: center;
     padding: 25px;
@@ -213,13 +290,15 @@ footer{
     padding-right: 10%;
     flex-wrap: wrap;
 }
-.patrocinadores img{
+
+.patrocinadores img {
     flex-grow: 1;
     margin: 5px;
     padding: 5px;
     max-width: 75px;
 }
-.separador{
+
+.separador {
     background-image: url(../imgs/tujilAve.png);
     margin: 25px;
     background-repeat: repeat-x;
@@ -227,51 +306,54 @@ footer{
     height: 50px;
 }
 
-.presentaciones{
-    
-}
-.contPresentacion{
+.presentaciones {}
+
+.contPresentacion {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
     justify-content: center;
     align-items: center;
-    
-}
-.textoPresentacion{
-    padding: 50px;
-}
-.contPresentacion div{
 
 }
-.verdeClarito{
+
+.textoPresentacion {
+    padding: 50px;
+}
+
+.verdeClarito {
     background-color: #19988b;
     color: white;
 }
-.rojito{
+
+.rojito {
     background-color: #b12029;
     color: white;
 }
-.contImgPresentación{
-    display: flex;  
-    max-height: 400px;  
+
+.contImgPresentación {
+    display: flex;
+    max-height: 400px;
     align-content: center;
-    
+
 }
-.contImgPresentación img{
+
+.contImgPresentación img {
     transition: 1000ms;
     width: 0px;
     flex-grow: 1;
-    object-fit:cover;
+    object-fit: cover;
     opacity: 0.8;
 }
-.contImgPresentación img:hover{
+
+.contImgPresentación img:hover {
     transition: 400ms;
     width: 800px;
     opacity: 1;
     filter: contrast(120%);
 }
-.contacto{
+
+.contacto {
     background-color: #1d1934;
     color: white;
     padding: 45px;
@@ -279,53 +361,59 @@ footer{
     padding-right: 25%;
 }
 
-.galerias{
+.galerias {
     background-color: #1d1934;
     padding: 2% 5%;
 }
-.fondoContGaleria{
+
+.fondoContGaleria {
     background-color: black;
     margin-top: 15px;
 }
-.contGaleria{
+
+.contGaleria {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding:  5%;
-    color:#ffffff;
+    padding: 5%;
+    color: #ffffff;
     text-align: center;
     align-items: center;
 }
-.contGaleria article{
+
+.contGaleria article {
     padding: 50px;
 }
-.contGaleria p{
+
+.contGaleria p {
     font-size: 15px;
     font-weight: 300;
     text-align: justify;
 }
-.contImgGaleria{
+
+.contImgGaleria {
     margin: 60px;
     height: 100%;
     border: 10px solid white;
     border-bottom: 60px solid white;
     transition: 1000ms;
-    
+
 }
-.backAfiche{
+
+.backAfiche {
     background-image: url(../imgs/afiches.jpg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
 }
-.contImgGaleria:hover{
+
+.contImgGaleria:hover {
     transition: 500ms;
-    
+
     transform: scale(1.2) rotate(-25deg);
-    
-}
-.bordeDerecho{
-    
-    border-right:dotted #ffffff 5px ;
+
 }
 
+.bordeDerecho {
 
+    border-right: dotted #ffffff 5px;
+}
