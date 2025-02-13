@@ -14,8 +14,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
-    display: grid;
-    grid-template-columns: 45% 55%;
     background-color: black;
 }
 
@@ -33,14 +31,11 @@ body {
 
 .contImg {
     text-align: center;
-
+    
+    background-image: url(../imgs/Tujil\ L2\ blanco.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.contImg img {
-    max-width: 65%;
-}
-
-
 
 .menu {
     margin: 20px;
@@ -160,7 +155,7 @@ body {
     margin-bottom: 20px;
 }
 
-.contCulturaLugar{
+.contCulturaLugar {
     display: grid;
     grid-template-rows: 35% 65%;
 
@@ -217,25 +212,29 @@ body {
     text-align: center;
     align-content: center;
 }
-.infoCultura h2{
+
+.infoCultura h2 {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 50px;
     line-height: 40px;
 }
-.PrimerParrafoCultura{
+
+.PrimerParrafoCultura {
     margin-top: 35px;
     padding-bottom: 10px;
     margin-bottom: 15px;
     border-bottom: #ffffff 2px solid;
 }
-.PrimerParrafoCultura p{
+
+.PrimerParrafoCultura p {
     font-weight: 600;
 }
-.segundoParrafoCultura{
+
+.segundoParrafoCultura {
     text-align: justify;
     font-weight: 300;
-    font-size: small;    
+    font-size: small;
 }
 
 .artSecundario {
@@ -416,4 +415,87 @@ footer {
 .bordeDerecho {
 
     border-right: dotted #ffffff 5px;
+}
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .encabezado {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .contImg {
+        height: 250px;
+        background-size: contain;
+    }
+}
+
+/* 📱 Teléfonos medianos y grandes (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .encabezado {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .contImg {
+        height: 250px;
+        background-size: contain;
+    }
+}
+
+/* 📟 Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .encabezado {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        
+    }
+    .contImg {
+        height: 100%;
+        background-size: 100%;
+        
+    }
+}
+
+/* 💻 Laptops y pantallas medianas (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .encabezado {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        
+    }
+    .contImg {
+        height: 100%;
+        background-size: 75%;
+        
+    }
+}
+
+/* 🖥️ Pantallas grandes (1201px - 1600px) */
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .encabezado {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+    }
+    .contImg {
+        height: 100%;
+        background-size: 65%;
+        
+    }
+}
+@media (min-width: 1601px) {
+    .encabezado {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+    }
+    .contImg {
+        height: 100%;
+        background-size: 30%;
+        
+    }
 }
