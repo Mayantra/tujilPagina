@@ -5,6 +5,11 @@ window.sr = ScrollReveal();
         origin: 'bottom',
         distance: '-50px'
     });
+    sr.reveal('.menuPequeno', {
+        duration: 3000,
+        origin: 'bottom',
+        distance: '-50px'
+    });
     sr.reveal('.mensajePrincipal', {
         duration: 3000,
         origin: 'bottom',
@@ -20,5 +25,6 @@ window.sr = ScrollReveal();
         opacity: 0.6,
     });
     sr.reveal('.escalas', {
+        duration:1000,
         scale: 0.5,
     });
