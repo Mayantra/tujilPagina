@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'lemonMilBold';
+    src: url(../fonts/lemon_milk/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+    font-family: 'sterla';
+    src: url(../fonts/sterla/Sterla.ttf);
+}
+@font-face {
+    font-family: 'lemonMildLinght';
+    src: url(../fonts/lemon_milk/LEMONMILK-Light.otf);
+}
 body {
     margin: 0;
     padding: 0;
@@ -44,8 +57,8 @@ body {
 
     color: white;
 
-
 }
+
 
 
 
@@ -211,6 +224,10 @@ body {
     font-size: 50px;
 }
 
+.textoPresentacion h1 {
+    font-family: 'lemonMilBold';
+}
+
 .sSecundario {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -234,11 +251,17 @@ footer {
     background-image: url(../imgs/sombreros.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .contFooter {
     background-color: rgba(29, 25, 52, 0.85);
     color: white;
+}
+
+.contFooter h2 {
+    font-family: 'lemonMilBold';
 }
 
 .hPatrocinadores {
@@ -313,6 +336,14 @@ footer {
     filter: contrast(120%);
 }
 
+
+
+
+
+
+/*---------------------------------------------------
+Generales Galeria
+-----------------------------------------------------*/
 .contGaleriaGeneral {
     background-image: url(../imgs/textureBooks.jpg);
 }
@@ -323,6 +354,7 @@ footer {
 
 .fondoContGaleria {
     border-radius: 5px;
+    border-left: solid #ffffff 30px;
     margin-top: 15px;
 }
 
@@ -338,10 +370,23 @@ footer {
     align-items: center;
 }
 
+.contGaleria h1 {
+    font-family: 'lemonMilBold';
+}
+
 .naranjita {
     background-color: #EFC77F;
     color: black;
 
+}
+.verdesitoOscuro{
+    background-color: #2A7D5F;
+    color: white;
+}
+
+.naranjota {
+    background-color: #E58E01;
+    color: white;
 }
 
 .contGaleria article {
@@ -356,7 +401,7 @@ footer {
 
 .contImgGaleria {
     margin: 60px;
-    
+
     transition: 1000ms;
 
 }
@@ -381,12 +426,30 @@ footer {
     border-right: dotted #ffffff 5px;
 }
 
+/*-----------------------------------
+Imagenes de Presentaciones
+------------------------------------
+*/
 .imgPL {
     background-image: url(../imgs/imgPL.jpg);
 }
-.collages{
-    padding: 5%;
+
+.imgLP {}
+
+.imgCC {
+    background-image: url(../imgs/imgCC.JPG);
 }
+
+.contImgPresentación:hover {
+    background-position-x: left;
+}
+
+
+.collages {
+    padding: 2%;
+    
+}
+
 .collages ul {
     display: flex;
     flex-wrap: wrap;
@@ -403,10 +466,15 @@ footer {
 }
 
 .collages img {
+    transition: 1000ms;
     max-height: 100%;
     min-width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+}
+.collages img:hover{
+    transition: 500ms;
+    transform: scale(1.2);
 }
 
 
@@ -498,7 +566,7 @@ footer {
 
     .contPresentacioLeft {
         display: grid;
-        grid-template-columns: 5fr 1fr;
+        grid-template-columns: 2fr 1fr;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -507,17 +575,139 @@ footer {
 
     .contPresentacioRigth {
         display: grid;
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 1fr 2fr;
         text-align: center;
         justify-content: center;
         align-items: center;
     }
 
 
+
     .textoPresentacion {
-        padding: 25px;
+        padding: 15px;
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    
+    
+    /* Carrusel */
+    .carruselAutores {
+        display: flex;
+        /* Usa flexbox */
+        justify-content: center;
+        /* Alinea al centro horizontalmente */
+        background-color: #e2e6cb;
+        padding: 35px;
+        
+    }
+
+    .carousel-container {
+        position: relative;
+        /* Posición relativa */
+        width: 100%;
+        /* Ancho del contenedor */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+
+    }
+
+    .carousel {
+        display: flex;
+        /* Usa flexbox */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+    }
+
+    .carousel-items {
+        display: flex;
+        /* Usa flexbox */
+        transition: transform 0.5s ease;
+        /* Transición de transformación */
+    }
+
+    .carousel article {
+        flex: 0 0 calc(12% );
+        /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
+        margin: 15px;
+        /* Margen */
+        /* Padding */
+        background: #1d1934;
+        
+        /* Sombra */
+        text-align: left;
+        border-radius: 15px;
+        /* Alineación de texto */
+        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+        
+    }
+    .contTextCarrusel{
+        padding: 25px;
+    }
+    .carousel a{
+        text-decoration: none;
+        color: white;
+    }
+    .contImgCarrusel{
+        height: 150px;
+        overflow: hidden;
+        border-radius: 15px 15px 45px 0px;
+    }
+    .carousel img {
+        position: relative;
+        top:-45%;
+        /* Altura automática */
+        
+        margin-bottom: 10px;
+    }
+
+    /* Botones de navegación del carrusel */
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        /* Posición absoluta */
+        top: 50%;
+        /* Alineación vertical al centro */
+        transform: translateY(-50%);
+        /* Ajuste vertical */
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        /* Color de texto blanco */
+        border: none;
+        /* Sin borde */
+        padding: 10px;
+        /* Padding */
+        cursor: pointer;
+        /* Cursor tipo puntero */
+        z-index: 1;
+        /* Índice de apilamiento */
+    }
+
+    #prevBtn {
+        left: 0px;
+        /* Alineación a la izquierda */
+    }
+
+    #nextBtn {
+        right: 0px;
+        /* Alineación a la derecha */
+    }
+
+
+    /* Sección collage de la página */
+
+    /* Estilos para el contenedor principal de la sección */
+    .sectionMoreProductos {
+        display: grid;
+        /* Usa una cuadrícula CSS */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        padding: 5%;
+        /* Padding interior */
+        opacity: 0;
+        /* Empieza invisible */
+        transition: opacity 2s ease-in-out;
+        /* Transición de opacidad */
     }
 
     .contacto {
@@ -627,6 +817,127 @@ footer {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+    
+    /* Carrusel de productos */
+    .carruselAutores {
+        display: flex;
+        /* Usa flexbox */
+        justify-content: center;
+        /* Alinea al centro horizontalmente */
+        background-color: #e2e6cb;
+        padding: 35px;
+        
+    }
+
+    .carousel-container {
+        position: relative;
+        /* Posición relativa */
+        width: 100%;
+        /* Ancho del contenedor */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+
+    }
+
+    .carousel {
+        display: flex;
+        /* Usa flexbox */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+    }
+
+    .carousel-items {
+        display: flex;
+        /* Usa flexbox */
+        transition: transform 0.5s ease;
+        /* Transición de transformación */
+    }
+
+    .carousel article {
+        flex: 0 0 calc(16% );
+        /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
+        margin: 15px;
+        /* Margen */
+        /* Padding */
+        background: #1d1934;
+        
+        /* Sombra */
+        text-align: left;
+        border-radius: 15px;
+        /* Alineación de texto */
+        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+        
+    }
+    .contTextCarrusel{
+        padding: 25px;
+    }
+    .carousel a{
+        text-decoration: none;
+        color: white;
+    }
+    .contImgCarrusel{
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px 15px 45px 0px;
+    }
+    .carousel img {
+        position: relative;
+        
+        top:-45%;
+        /* Altura automática */
+        
+        margin-bottom: 10px;
+    }
+
+    /* Botones de navegación del carrusel */
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        /* Posición absoluta */
+        top: 50%;
+        /* Alineación vertical al centro */
+        transform: translateY(-50%);
+        /* Ajuste vertical */
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        /* Color de texto blanco */
+        border: none;
+        /* Sin borde */
+        padding: 10px;
+        /* Padding */
+        cursor: pointer;
+        /* Cursor tipo puntero */
+        z-index: 1;
+        /* Índice de apilamiento */
+    }
+
+    #prevBtn {
+        left: 0px;
+        /* Alineación a la izquierda */
+    }
+
+    #nextBtn {
+        right: 0px;
+        /* Alineación a la derecha */
+    }
+
+
+    /* Sección collage de la página */
+
+    /* Estilos para el contenedor principal de la sección */
+    .sectionMoreProductos {
+        display: grid;
+        /* Usa una cuadrícula CSS */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        padding: 5%;
+        /* Padding interior */
+        opacity: 0;
+        /* Empieza invisible */
+        transition: opacity 2s ease-in-out;
+        /* Transición de opacidad */
+    }
 
     .contacto {
         background-color: #1d1934;
@@ -721,6 +1032,127 @@ footer {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+    
+    /* Carrusel de productos */
+    .carruselAutores {
+        display: flex;
+        /* Usa flexbox */
+        justify-content: center;
+        /* Alinea al centro horizontalmente */
+        background-color: #e2e6cb;
+        padding: 35px;
+        
+    }
+
+    .carousel-container {
+        position: relative;
+        /* Posición relativa */
+        width: 100%;
+        /* Ancho del contenedor */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+
+    }
+
+    .carousel {
+        display: flex;
+        /* Usa flexbox */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+    }
+
+    .carousel-items {
+        display: flex;
+        /* Usa flexbox */
+        transition: transform 0.5s ease;
+        /* Transición de transformación */
+    }
+
+    .carousel article {
+        flex: 0 0 calc(16% );
+        /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
+        margin: 15px;
+        /* Margen */
+        /* Padding */
+        background: #1d1934;
+        
+        /* Sombra */
+        text-align: left;
+        border-radius: 15px;
+        /* Alineación de texto */
+        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+        
+    }
+    .contTextCarrusel{
+        padding: 25px;
+    }
+    .carousel a{
+        text-decoration: none;
+        color: white;
+    }
+    .contImgCarrusel{
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px 15px 45px 0px;
+    }
+    .carousel img {
+        position: relative;
+        
+        top:-45%;
+        /* Altura automática */
+        
+        margin-bottom: 10px;
+    }
+
+    /* Botones de navegación del carrusel */
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        /* Posición absoluta */
+        top: 50%;
+        /* Alineación vertical al centro */
+        transform: translateY(-50%);
+        /* Ajuste vertical */
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        /* Color de texto blanco */
+        border: none;
+        /* Sin borde */
+        padding: 10px;
+        /* Padding */
+        cursor: pointer;
+        /* Cursor tipo puntero */
+        z-index: 1;
+        /* Índice de apilamiento */
+    }
+
+    #prevBtn {
+        left: 0px;
+        /* Alineación a la izquierda */
+    }
+
+    #nextBtn {
+        right: 0px;
+        /* Alineación a la derecha */
+    }
+
+
+    /* Sección collage de la página */
+
+    /* Estilos para el contenedor principal de la sección */
+    .sectionMoreProductos {
+        display: grid;
+        /* Usa una cuadrícula CSS */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        padding: 5%;
+        /* Padding interior */
+        opacity: 0;
+        /* Empieza invisible */
+        transition: opacity 2s ease-in-out;
+        /* Transición de opacidad */
+    }
 
     .contacto {
         background-color: #1d1934;
@@ -814,6 +1246,127 @@ footer {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+    
+    /* Carrusel de productos */
+    .carruselAutores {
+        display: flex;
+        /* Usa flexbox */
+        justify-content: center;
+        /* Alinea al centro horizontalmente */
+        background-color: #e2e6cb;
+        padding: 35px;
+        
+    }
+
+    .carousel-container {
+        position: relative;
+        /* Posición relativa */
+        width: 100%;
+        /* Ancho del contenedor */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+
+    }
+
+    .carousel {
+        display: flex;
+        /* Usa flexbox */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+    }
+
+    .carousel-items {
+        display: flex;
+        /* Usa flexbox */
+        transition: transform 0.5s ease;
+        /* Transición de transformación */
+    }
+
+    .carousel article {
+        flex: 0 0 calc(16% );
+        /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
+        margin: 15px;
+        /* Margen */
+        /* Padding */
+        background: #1d1934;
+        
+        /* Sombra */
+        text-align: left;
+        border-radius: 15px;
+        /* Alineación de texto */
+        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+        
+    }
+    .contTextCarrusel{
+        padding: 25px;
+    }
+    .carousel a{
+        text-decoration: none;
+        color: white;
+    }
+    .contImgCarrusel{
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px 15px 45px 0px;
+    }
+    .carousel img {
+        position: relative;
+        
+        top:-45%;
+        /* Altura automática */
+        
+        margin-bottom: 10px;
+    }
+
+    /* Botones de navegación del carrusel */
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        /* Posición absoluta */
+        top: 50%;
+        /* Alineación vertical al centro */
+        transform: translateY(-50%);
+        /* Ajuste vertical */
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        /* Color de texto blanco */
+        border: none;
+        /* Sin borde */
+        padding: 10px;
+        /* Padding */
+        cursor: pointer;
+        /* Cursor tipo puntero */
+        z-index: 1;
+        /* Índice de apilamiento */
+    }
+
+    #prevBtn {
+        left: 0px;
+        /* Alineación a la izquierda */
+    }
+
+    #nextBtn {
+        right: 0px;
+        /* Alineación a la derecha */
+    }
+
+
+    /* Sección collage de la página */
+
+    /* Estilos para el contenedor principal de la sección */
+    .sectionMoreProductos {
+        display: grid;
+        /* Usa una cuadrícula CSS */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        padding: 5%;
+        /* Padding interior */
+        opacity: 0;
+        /* Empieza invisible */
+        transition: opacity 2s ease-in-out;
+        /* Transición de opacidad */
+    }
 
     .contacto {
         background-color: #1d1934;
@@ -906,6 +1459,139 @@ footer {
         padding-top: 100px;
         padding-bottom: 100px;
     }
+    .tituloCarrousel{
+        text-align: center;
+        text-transform: uppercase;
+        
+    }
+    .tituloCarrousel h1{
+        
+        padding: 1%;
+    }
+    /* Carrusel */
+    .carruselAutores {
+        font-family: lemonMilLight;
+        display: flex;
+        /* Usa flexbox */
+        justify-content: center;
+        /* Alinea al centro horizontalmente */
+        background-image: url(../imgs/backColumna.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 35px;
+        
+    }
+
+    .carousel-container {
+        position: relative;
+        /* Posición relativa */
+        width: 100%;
+        /* Ancho del contenedor */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+
+    }
+
+    .carousel {
+        display: flex;
+        /* Usa flexbox */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+    }
+
+    .carousel-items {
+        display: flex;
+        /* Usa flexbox */
+        transition: transform 0.5s ease;
+        /* Transición de transformación */
+    }
+
+    .carousel article {
+        flex: 0 0 calc(16% );
+        /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
+        margin: 15px;
+        /* Margen */
+        /* Padding */
+        background: #1d1934;
+        
+        /* Sombra */
+        text-align: left;
+        border-radius: 15px;
+        /* Alineación de texto */
+        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+        
+    }
+    .contTextCarrusel{
+        padding: 25px;
+    }
+    .carousel a{
+        text-decoration: none;
+        color: white;
+    }
+    .contImgCarrusel{
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px 15px 45px 0px;
+    }
+    .carousel img {
+        position: relative;
+        
+        top:-45%;
+        /* Altura automática */
+        
+        margin-bottom: 10px;
+    }
+
+    /* Botones de navegación del carrusel */
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        /* Posición absoluta */
+        top: 50%;
+        /* Alineación vertical al centro */
+        transform: translateY(-50%);
+        /* Ajuste vertical */
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        /* Color de texto blanco */
+        border: none;
+        /* Sin borde */
+        padding: 10px;
+        /* Padding */
+        cursor: pointer;
+        /* Cursor tipo puntero */
+        z-index: 1;
+        /* Índice de apilamiento */
+    }
+
+    #prevBtn {
+        left: 0px;
+        /* Alineación a la izquierda */
+    }
+
+    #nextBtn {
+        right: 0px;
+        /* Alineación a la derecha */
+    }
+
+
+    /* Sección collage de la página */
+
+    /* Estilos para el contenedor principal de la sección */
+    .sectionMoreProductos {
+        display: grid;
+        /* Usa una cuadrícula CSS */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        padding: 5%;
+        /* Padding interior */
+        opacity: 0;
+        /* Empieza invisible */
+        transition: opacity 2s ease-in-out;
+        /* Transición de opacidad */
+    }
 
     .contacto {
         background-color: #1d1934;
@@ -996,6 +1682,127 @@ footer {
         padding: 50px;
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    
+    /* Carrusel de productos */
+    .carruselAutores {
+        display: flex;
+        /* Usa flexbox */
+        justify-content: center;
+        /* Alinea al centro horizontalmente */
+        background-color: #e2e6cb;
+        padding: 35px;
+        
+    }
+
+    .carousel-container {
+        position: relative;
+        /* Posición relativa */
+        width: 100%;
+        /* Ancho del contenedor */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+
+    }
+
+    .carousel {
+        display: flex;
+        /* Usa flexbox */
+        overflow: hidden;
+        /* Oculta el desbordamiento */
+    }
+
+    .carousel-items {
+        display: flex;
+        /* Usa flexbox */
+        transition: transform 0.5s ease;
+        /* Transición de transformación */
+    }
+
+    .carousel article {
+        flex: 0 0 calc(16% );
+        /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
+        margin: 15px;
+        /* Margen */
+        /* Padding */
+        background: #1d1934;
+        
+        /* Sombra */
+        text-align: left;
+        border-radius: 15px;
+        /* Alineación de texto */
+        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+        
+    }
+    .contTextCarrusel{
+        padding: 25px;
+    }
+    .carousel a{
+        text-decoration: none;
+        color: white;
+    }
+    .contImgCarrusel{
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px 15px 45px 0px;
+    }
+    .carousel img {
+        position: relative;
+        
+        top:-45%;
+        /* Altura automática */
+        
+        margin-bottom: 10px;
+    }
+
+    /* Botones de navegación del carrusel */
+    #prevBtn,
+    #nextBtn {
+        position: absolute;
+        /* Posición absoluta */
+        top: 50%;
+        /* Alineación vertical al centro */
+        transform: translateY(-50%);
+        /* Ajuste vertical */
+        background: rgba(0, 0, 0, 0.5);
+        /* Fondo semitransparente */
+        color: white;
+        /* Color de texto blanco */
+        border: none;
+        /* Sin borde */
+        padding: 10px;
+        /* Padding */
+        cursor: pointer;
+        /* Cursor tipo puntero */
+        z-index: 1;
+        /* Índice de apilamiento */
+    }
+
+    #prevBtn {
+        left: 0px;
+        /* Alineación a la izquierda */
+    }
+
+    #nextBtn {
+        right: 0px;
+        /* Alineación a la derecha */
+    }
+
+
+    /* Sección collage de la página */
+
+    /* Estilos para el contenedor principal de la sección */
+    .sectionMoreProductos {
+        display: grid;
+        /* Usa una cuadrícula CSS */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas iguales */
+        padding: 5%;
+        /* Padding interior */
+        opacity: 0;
+        /* Empieza invisible */
+        transition: opacity 2s ease-in-out;
+        /* Transición de opacidad */
     }
 
     .contacto {

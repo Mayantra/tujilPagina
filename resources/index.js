@@ -28,3 +28,5 @@ window.sr = ScrollReveal();
         duration:1000,
         scale: 0.5,
     });
+    
+
