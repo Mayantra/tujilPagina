@@ -7,10 +7,13 @@
     font-family: 'sterla';
     src: url(../fonts/sterla/Sterla.ttf);
 }
+
 @font-face {
     font-family: 'lemonMildLinght';
     src: url(../fonts/lemon_milk/LEMONMILK-Light.otf);
 }
+
+
 body {
     margin: 0;
     padding: 0;
@@ -195,8 +198,8 @@ body {
 .infoCultura h2 {
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 50px;
-    line-height: 40px;
+    font-size: 35px;
+    line-height: 30px;
 }
 
 .PrimerParrafoCultura {
@@ -238,6 +241,7 @@ body {
     background-color: rgba(29, 25, 52);
     padding: 15px;
     margin: 5px;
+    font-size: 13px;
 }
 
 .imgVertical1 {
@@ -252,10 +256,12 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 
 .contFooter {
+    display: grid;
     background-color: rgba(29, 25, 52, 0.85);
     color: white;
 }
@@ -273,17 +279,16 @@ footer {
 .patrocinadores {
     display: flex;
     justify-content: center;
-    padding: 25px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
     flex-wrap: wrap;
 }
 
 .patrocinadores img {
-    flex-grow: 1;
+    object-fit: contain;
     margin: 5px;
-    padding: 5px;
-    max-width: 75px;
+    object-position: center;
 }
 
 .separador {
@@ -318,6 +323,12 @@ footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
 }
+.rojoOscuro{
+    background-color: #581014;
+    color: white;
+}
+
+
 
 
 .contImgPresentación {
@@ -363,12 +374,7 @@ Generales Galeria
     color: white;
 }
 
-.contGaleria {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    align-items: center;
-}
+
 
 .contGaleria h1 {
     font-family: 'lemonMilBold';
@@ -379,7 +385,8 @@ Generales Galeria
     color: black;
 
 }
-.verdesitoOscuro{
+
+.verdesitoOscuro {
     background-color: #2A7D5F;
     color: white;
 }
@@ -388,10 +395,12 @@ Generales Galeria
     background-color: #E58E01;
     color: white;
 }
-
-.contGaleria article {
-    padding: 50px;
+.blancote{
+    background-color: white;
+    color: black;
 }
+
+
 
 .contGaleria p {
     font-size: 15px;
@@ -400,31 +409,15 @@ Generales Galeria
 }
 
 .contImgGaleria {
-    margin: 60px;
-
     transition: 1000ms;
-
 }
-
-.contGaleria img {
-    border: 10px solid white;
-    border-bottom: 50px solid white;
-    width: 75%;
-}
-
-
-
 .contImgGaleria:hover {
     transition: 500ms;
-
-    transform: scale(1.2) rotate(-25deg);
+    transform: scale(1.1) rotate(-20deg);
 
 }
 
-.bordeDerecho {
 
-    border-right: dotted #ffffff 5px;
-}
 
 /*-----------------------------------
 Imagenes de Presentaciones
@@ -434,10 +427,24 @@ Imagenes de Presentaciones
     background-image: url(../imgs/imgPL.jpg);
 }
 
-.imgLP {}
+.imgLP {
+    background-image: url(../imgs/imgLP.jpg);
+}
 
 .imgCC {
     background-image: url(../imgs/imgCC.JPG);
+}
+
+.imgArtesVisuales {
+    background-image: url(../imgs/artesVisuales.jpg);
+}
+
+.imgMusica {
+    background-image: url(../imgs/imgMusica.jpg);
+}
+
+.imgTalleres {
+    background-image: url(../imgs/imgTalleres.jpg);
 }
 
 .contImgPresentación:hover {
@@ -445,38 +452,128 @@ Imagenes de Presentaciones
 }
 
 
+
+
 .collages {
-    padding: 2%;
-    
+    overflow: hidden;
+    padding: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 2%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 1);
+
 }
 
-.collages ul {
+.collages div {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
-.collages li {
-    list-style: none;
-    height: 60vh;
+
+
+.collages li:last-child {
     flex-grow: 1;
 }
 
-.collages li:last-child {
-    flex-grow: 10;
-}
-
 .collages img {
-    transition: 1000ms;
+    transition: transform 500ms, transform-origin 50ms;
     max-height: 100%;
     min-width: 100%;
     object-fit: cover;
-    vertical-align: bottom;
-}
-.collages img:hover{
-    transition: 500ms;
-    transform: scale(1.2);
+    object-position: top;
+
 }
 
+.collages img:hover {
+    transform: scale(1.8);
+}
+
+.OtrosPatrocinadores-cont {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.itemsPatrocinadores {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+}
+
+.carousel-track img {
+    height: 75px;
+    max-width: 130px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* Animación que se repite de forma continua */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.pdf-container {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+
+
+.contAutores img {
+    border-radius: 100%;
+    margin-right: 25px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.contAutores {
+    font-family: "Josefin Slab", serif;
+    font-weight: 500;
+    font-size: 17px;
+    font-style: normal;
+    line-height: 20px;
+    padding: 5%;
+    border-top: solid 1px #212529;
+}
+
+.contAutores p {
+    text-align: justify;
+}
+
+.contNombreAutor p{
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.edicion2025{
+    background-image: url(../imgs/poster2025.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    font-family: lemonMilBold;
+    
+}
+.edicion2025Letras{
+    padding: 15%;
+    background-color: rgba(0, 0, 0,0.3);
+}
 
 /* Medias
 ------------------------------------------------------------------------------------------
@@ -502,35 +599,38 @@ Imagenes de Presentaciones
 
         /* Elimina los estilos de lista */
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
+        grid-template-columns: repeat(6, 1fr);
+        align-items: end;
+        text-align: center;
+        padding: 1%;
+        border-radius: 1%;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+    .menuPequeno i{
+        font-size: 30px;
+    }
+    .menuPequeno p{
+        font-size: 10px;
     }
 
     .menuPequeno a {
         text-decoration: none;
+
         /* Elimina el subrayado de los enlaces */
         color: white;
         /* Color de texto negro */
-        /* Espaciado interno de 2px */
-        font-weight: 300;
 
-        padding-left: 10px;
         transition: 1000ms;
-        border-bottom: rgba(255, 255, 255, 0.4) 1px solid;
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 2.5px;
+        margin-left: 2.5px;
+
     }
 
-    .contItemsMenu {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        text-align: left;
-        padding-top: 15px;
-    }
 
 
     .contImgMenu img {
-        width: 40%;
+        width: 65%;
     }
 
 
@@ -548,14 +648,13 @@ Imagenes de Presentaciones
 
     .mensajePrincipal {
         margin: 0px;
-        margin-top: 50px;
         padding: 40px;
         margin-bottom: 50px;
     }
 
     .mensajePrincipal h1 {
         font-weight: 300;
-        font-size: 50px;
+        font-size: 35px;
         margin-bottom: 25px;
     }
 
@@ -588,17 +687,21 @@ Imagenes de Presentaciones
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    
-    
+
+
     /* Carrusel */
     .carruselAutores {
+        font-family: lemonMilLight;
         display: flex;
         /* Usa flexbox */
         justify-content: center;
         /* Alinea al centro horizontalmente */
-        background-color: #e2e6cb;
+        background-color: #080E1C;
         padding: 35px;
-        
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 100px;
+        color: white;
     }
 
     .carousel-container {
@@ -626,37 +729,43 @@ Imagenes de Presentaciones
     }
 
     .carousel article {
-        flex: 0 0 calc(12% );
+        flex: 0 0 calc(14%);
         /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
-        margin: 15px;
+        margin: 10px;
         /* Margen */
         /* Padding */
-        background: #1d1934;
-        
+        background: rgba(255, 255, 255, 0.9);
+
         /* Sombra */
         text-align: left;
         border-radius: 15px;
-        /* Alineación de texto */
-        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
-        
+
     }
-    .contTextCarrusel{
+
+    .contTextCarrusel {
         padding: 25px;
     }
-    .carousel a{
+
+    .carousel a {
         text-decoration: none;
-        color: white;
+        color: black;
+
     }
-    .contImgCarrusel{
-        height: 150px;
+
+    .tituloCarrousel {
+        font-family: lemonMilBold;
+    }
+
+    .contImgCarrusel {
+        height: 300px;
         overflow: hidden;
         border-radius: 15px 15px 45px 0px;
     }
+
     .carousel img {
         position: relative;
-        top:-45%;
         /* Altura automática */
-        
+
         margin-bottom: 10px;
     }
 
@@ -717,6 +826,58 @@ Imagenes de Presentaciones
         padding-left: 5%;
         padding-right: 5%;
     }
+
+    .TitulosEdiciones {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-family: lemonMilBold;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+    }
+
+    .collages li {
+        list-style: none;
+        overflow: hidden;
+        height: 25vh;
+        flex-grow: 1;
+        border: solid white 2px;
+    }
+
+    .TitulosEdiciones img {
+        max-width: 45%;
+        object-fit: cover;
+    }
+
+    .patrocinadores img {
+        max-width: 30%;
+        max-height: 120px;
+    }
+    .contAutores{
+        text-align: center;
+    }
+    .contAutores img{
+        width: 70%;
+    }
+    .contGaleria {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        align-items: center;
+    }
+    .contGaleria img {
+        border: 10px solid white;
+        border-bottom: 50px solid white;
+        width: 90%;
+    }
+    .contImgGaleria {
+        text-align: center;
+        margin: 15px;
+    }
+    .contGaleria article {
+        padding: 10px 40px;
+    }
 }
 
 /* 📱 Teléfonos medianos y grandes (481px - 768px) */
@@ -731,39 +892,43 @@ Imagenes de Presentaciones
         display: none;
     }
 
+
     .menuPequeno {
 
         /* Elimina los estilos de lista */
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
+        grid-template-columns: repeat(6, 1fr);
+        align-items: end;
+        text-align: center;
+        padding: 1%;
+        border-radius: 1%;
+        background-color: rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+    .menuPequeno i{
+        font-size: 40px;
+    }
+    .menuPequeno p{
+        font-size: 15px;
     }
 
     .menuPequeno a {
         text-decoration: none;
+
         /* Elimina el subrayado de los enlaces */
         color: white;
         /* Color de texto negro */
-        /* Espaciado interno de 2px */
-        font-weight: 300;
 
-        padding-left: 10px;
         transition: 1000ms;
-        border-bottom: rgba(255, 255, 255, 0.4) 1px solid;
-        margin-right: 10px;
-        margin-left: 10px;
+        margin-right: 2.5px;
+        margin-left: 2.5px;
+
     }
 
-    .contItemsMenu {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        text-align: left;
-        padding-top: 15px;
-    }
 
 
     .contImgMenu img {
-        width: 25%;
+        width: 45px;
     }
 
 
@@ -791,7 +956,7 @@ Imagenes de Presentaciones
 
     .principal {
         grid-template-columns: 1fr 1fr;
-        padding: 25px;
+        padding: 5px;
     }
 
     .contPresentacioLeft {
@@ -817,16 +982,18 @@ Imagenes de Presentaciones
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    
+
     /* Carrusel de productos */
     .carruselAutores {
+        font-family: lemonMilLight;
         display: flex;
         /* Usa flexbox */
         justify-content: center;
         /* Alinea al centro horizontalmente */
-        background-color: #e2e6cb;
+        background-color: #080E1C;
         padding: 35px;
-        
+        padding-bottom: 100px;
+        color: white;
     }
 
     .carousel-container {
@@ -854,38 +1021,43 @@ Imagenes de Presentaciones
     }
 
     .carousel article {
-        flex: 0 0 calc(16% );
+        flex: 0 0 calc(18%);
         /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
-        margin: 15px;
+        margin: 10px;
         /* Margen */
         /* Padding */
-        background: #1d1934;
-        
+        background: rgba(255, 255, 255, 0.9);
+
         /* Sombra */
         text-align: left;
         border-radius: 15px;
-        /* Alineación de texto */
-        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
-        
+
     }
-    .contTextCarrusel{
+
+    .contTextCarrusel {
         padding: 25px;
     }
-    .carousel a{
+
+    .carousel a {
         text-decoration: none;
-        color: white;
+        color: black;
+
     }
-    .contImgCarrusel{
-        height: 200px;
+
+    .tituloCarrousel {
+        font-family: lemonMilBold;
+    }
+
+    .contImgCarrusel {
+        height: 300px;
         overflow: hidden;
         border-radius: 15px 15px 45px 0px;
     }
+
     .carousel img {
         position: relative;
-        
-        top:-45%;
         /* Altura automática */
-        
+
         margin-bottom: 10px;
     }
 
@@ -945,6 +1117,57 @@ Imagenes de Presentaciones
         padding: 45px;
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    .TitulosEdiciones {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-family: lemonMilBold;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .TitulosEdiciones img {
+        max-width: 45%;
+        object-fit: cover;
+    }
+
+    .collages li {
+        list-style: none;
+        overflow: hidden;
+        height: 30vh;
+        flex-grow: 1;
+        border: solid white 2px;
+    }
+
+    .patrocinadores img {
+        max-width: 30%;
+        max-height: 120px;
+    }
+    .contAutores img{
+        float: left;
+        width: 40%;
+    }
+    .contGaleria {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+    }
+    .contGaleria img {
+        border: 10px solid white;
+        border-bottom: 50px solid white;
+        width: 60%;
+    }
+    .contImgGaleria {
+        text-align: center;
+        margin: 15px;
+    }
+    .contGaleria article {
+        padding: 10px 40px;
     }
 
 }
@@ -1032,16 +1255,18 @@ Imagenes de Presentaciones
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    
+
     /* Carrusel de productos */
     .carruselAutores {
+        font-family: lemonMilLight;
         display: flex;
         /* Usa flexbox */
         justify-content: center;
         /* Alinea al centro horizontalmente */
-        background-color: #e2e6cb;
+        background-color: #080E1C;
         padding: 35px;
-        
+        padding-bottom: 100px;
+        color: white;
     }
 
     .carousel-container {
@@ -1069,38 +1294,44 @@ Imagenes de Presentaciones
     }
 
     .carousel article {
-        flex: 0 0 calc(16% );
+        flex: 0 0 calc(20%);
         /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
-        margin: 15px;
+        margin: 10px;
         /* Margen */
         /* Padding */
-        background: #1d1934;
-        
+        background: rgba(255, 255, 255, 0.9);
+
         /* Sombra */
         text-align: left;
         border-radius: 15px;
-        /* Alineación de texto */
-        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
-        
+
     }
-    .contTextCarrusel{
+
+    .contTextCarrusel {
         padding: 25px;
     }
-    .carousel a{
+
+    .carousel a {
         text-decoration: none;
-        color: white;
+        color: black;
+
     }
-    .contImgCarrusel{
-        height: 200px;
+
+    .tituloCarrousel {
+        font-family: lemonMilBold;
+        text-align: center;
+    }
+
+    .contImgCarrusel {
+        height: 300px;
         overflow: hidden;
         border-radius: 15px 15px 45px 0px;
     }
+
     .carousel img {
         position: relative;
-        
-        top:-45%;
         /* Altura automática */
-        
+
         margin-bottom: 10px;
     }
 
@@ -1160,6 +1391,57 @@ Imagenes de Presentaciones
         padding: 45px;
         padding-left: 20%;
         padding-right: 20%;
+    }
+
+    .TitulosEdiciones {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-family: lemonMilBold;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        text-align: right;
+    }
+
+
+    .TitulosEdiciones img {
+        max-width: 45%;
+        object-fit: cover;
+    }
+
+    .collages li {
+        list-style: none;
+        overflow: hidden;
+        height: 35vh;
+        flex-grow: 1;
+        border: solid white 2px;
+    }
+
+    .patrocinadores img {
+        max-width: 30%;
+        max-height: 120px;
+    }
+    
+    .contAutores img{
+        float: left;
+        width: 35%;
+    }
+    .contGaleria {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    .contGaleria img {
+        border: 10px solid white;
+        border-bottom: 50px solid white;
+        width: 100%;
+    }
+    .contImgGaleria {
+        margin: 15px;
+    }
+    .contGaleria article {
+        padding: 25px;
     }
 }
 
@@ -1246,16 +1528,18 @@ Imagenes de Presentaciones
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    
+
     /* Carrusel de productos */
     .carruselAutores {
+        font-family: lemonMilLight;
         display: flex;
         /* Usa flexbox */
         justify-content: center;
         /* Alinea al centro horizontalmente */
-        background-color: #e2e6cb;
+        background-color: #080E1C;
         padding: 35px;
-        
+        padding-bottom: 100px;
+        color: white;
     }
 
     .carousel-container {
@@ -1283,38 +1567,44 @@ Imagenes de Presentaciones
     }
 
     .carousel article {
-        flex: 0 0 calc(16% );
+        flex: 0 0 calc(20%);
         /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
-        margin: 15px;
+        margin: 10px;
         /* Margen */
         /* Padding */
-        background: #1d1934;
-        
+        background: rgba(255, 255, 255, 0.9);
+
         /* Sombra */
         text-align: left;
         border-radius: 15px;
-        /* Alineación de texto */
-        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
-        
+
     }
-    .contTextCarrusel{
+
+    .contTextCarrusel {
         padding: 25px;
     }
-    .carousel a{
+
+    .carousel a {
         text-decoration: none;
-        color: white;
+        color: black;
+
     }
-    .contImgCarrusel{
-        height: 200px;
+
+    .tituloCarrousel {
+        font-family: lemonMilBold;
+        text-align: center;
+    }
+
+    .contImgCarrusel {
+        height: 300px;
         overflow: hidden;
         border-radius: 15px 15px 45px 0px;
     }
+
     .carousel img {
         position: relative;
-        
-        top:-45%;
         /* Altura automática */
-        
+
         margin-bottom: 10px;
     }
 
@@ -1374,6 +1664,64 @@ Imagenes de Presentaciones
         padding: 45px;
         padding-left: 20%;
         padding-right: 20%;
+    }
+
+    .TitulosEdiciones {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-family: lemonMilBold;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        text-align: right;
+    }
+
+
+    .TitulosEdiciones img {
+        max-width: 35%;
+        object-fit: cover;
+    }
+
+    .collages li {
+        list-style: none;
+        overflow: hidden;
+        height: 40vh;
+        flex-grow: 1;
+        border: solid white 2px;
+    }
+
+    .patrocinadores img {
+        max-width: 25%;
+        max-height: 120px;
+    }
+    .contColumnasAutores {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contAutores img{
+        float: left;
+        width: 35%;
+    }
+    .contGaleria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    .contGaleria img {
+        border: 10px solid white;
+        border-bottom: 50px solid white;
+        width: 85%;
+    }
+    .bordeDerecho {
+
+        border-right: dotted #ffffff 5px;
+    }
+    .contImgGaleria {
+        margin: 25px;
+    }
+    .contGaleria article {
+        padding: 50px;
     }
 }
 
@@ -1459,15 +1807,18 @@ Imagenes de Presentaciones
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    .tituloCarrousel{
+
+    .tituloCarrousel {
         text-align: center;
         text-transform: uppercase;
-        
+
     }
-    .tituloCarrousel h1{
-        
+
+    .tituloCarrousel h1 {
+
         padding: 1%;
     }
+
     /* Carrusel */
     .carruselAutores {
         font-family: lemonMilLight;
@@ -1475,12 +1826,10 @@ Imagenes de Presentaciones
         /* Usa flexbox */
         justify-content: center;
         /* Alinea al centro horizontalmente */
-        background-image: url(../imgs/backColumna.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        background-color: #080E1C;
         padding: 35px;
-        
+        padding-bottom: 100px;
+        color: white;
     }
 
     .carousel-container {
@@ -1508,38 +1857,43 @@ Imagenes de Presentaciones
     }
 
     .carousel article {
-        flex: 0 0 calc(16% );
+        flex: 0 0 calc(20%);
         /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
-        margin: 15px;
+        margin: 10px;
         /* Margen */
         /* Padding */
-        background: #1d1934;
-        
+        background: rgba(255, 255, 255, 0.9);
+
         /* Sombra */
         text-align: left;
         border-radius: 15px;
-        /* Alineación de texto */
-        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
-        
+
     }
-    .contTextCarrusel{
+
+    .contTextCarrusel {
         padding: 25px;
     }
-    .carousel a{
+
+    .carousel a {
         text-decoration: none;
-        color: white;
+        color: black;
+
     }
-    .contImgCarrusel{
-        height: 200px;
+
+    .tituloCarrousel {
+        font-family: lemonMilBold;
+    }
+
+    .contImgCarrusel {
+        height: 300px;
         overflow: hidden;
         border-radius: 15px 15px 45px 0px;
     }
+
     .carousel img {
         position: relative;
-        
-        top:-45%;
         /* Altura automática */
-        
+
         margin-bottom: 10px;
     }
 
@@ -1600,6 +1954,65 @@ Imagenes de Presentaciones
         padding-left: 20%;
         padding-right: 20%;
     }
+
+    .TitulosEdiciones {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-family: lemonMilBold;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        text-align: right;
+    }
+
+
+    .TitulosEdiciones img {
+        max-width: 35%;
+        object-fit: cover;
+    }
+
+    .collages li {
+        list-style: none;
+        overflow: hidden;
+        height: 45vh;
+        flex-grow: 1;
+        border: solid white 2px;
+    }
+
+    .patrocinadores img {
+        max-width: 15%;
+        max-height: 120px;
+    }
+    .contColumnasAutores {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contAutores img{
+        float: left;
+        width: 30%;
+    }
+    .contGaleria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    .contGaleria img {
+        border: 10px solid white;
+        border-bottom: 50px solid white;
+        width: 65%;
+    }
+    .bordeDerecho {
+
+        border-right: dotted #ffffff 5px;
+    }
+    .contImgGaleria {
+        margin: 25px;
+    }
+    .contGaleria article {
+        padding: 50px;
+    }
+
 }
 
 @media (min-width: 1601px) {
@@ -1683,16 +2096,18 @@ Imagenes de Presentaciones
         padding-top: 100px;
         padding-bottom: 100px;
     }
-    
+
     /* Carrusel de productos */
     .carruselAutores {
+        font-family: lemonMilLight;
         display: flex;
         /* Usa flexbox */
         justify-content: center;
         /* Alinea al centro horizontalmente */
-        background-color: #e2e6cb;
+        background-color: #080E1C;
         padding: 35px;
-        
+        padding-bottom: 100px;
+        color: white;
     }
 
     .carousel-container {
@@ -1720,38 +2135,43 @@ Imagenes de Presentaciones
     }
 
     .carousel article {
-        flex: 0 0 calc(16% );
+        flex: 0 0 calc(20%);
         /* Flexible, sin crecer ni encoger, ancho fijo para mostrar 4 artículos */
-        margin: 15px;
+        margin: 10px;
         /* Margen */
         /* Padding */
-        background: #1d1934;
-        
+        background: rgba(255, 255, 255, 0.9);
+
         /* Sombra */
         text-align: left;
         border-radius: 15px;
-        /* Alineación de texto */
-        box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
-        
+
     }
-    .contTextCarrusel{
+
+    .contTextCarrusel {
         padding: 25px;
     }
-    .carousel a{
+
+    .carousel a {
         text-decoration: none;
-        color: white;
+        color: black;
+
     }
-    .contImgCarrusel{
-        height: 200px;
+
+    .tituloCarrousel {
+        font-family: lemonMilBold;
+    }
+
+    .contImgCarrusel {
+        height: 300px;
         overflow: hidden;
         border-radius: 15px 15px 45px 0px;
     }
+
     .carousel img {
         position: relative;
-        
-        top:-45%;
         /* Altura automática */
-        
+
         margin-bottom: 10px;
     }
 
@@ -1811,5 +2231,63 @@ Imagenes de Presentaciones
         padding: 45px;
         padding-left: 20%;
         padding-right: 20%;
+    }
+
+    .TitulosEdiciones {
+        padding-left: 35px;
+        padding-right: 35px;
+        font-family: lemonMilBold;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: center;
+        text-align: right;
+    }
+
+
+    .TitulosEdiciones img {
+        max-width: 25%;
+        object-fit: cover;
+    }
+
+    .collages li {
+        list-style: none;
+        overflow: hidden;
+        height: 45vh;
+        flex-grow: 1;
+        border: solid white 2px;
+    }
+
+    .patrocinadores img {
+        max-width: 15%;
+        max-height: 120px;
+    }
+    .contColumnasAutores {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contAutores img{
+        float: left;
+        width: 30%;
+    }
+    .contGaleria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        align-items: center;
+    }
+    .contGaleria img {
+        border: 10px solid white;
+        border-bottom: 50px solid white;
+        width: 75%;
+    }
+    .bordeDerecho {
+
+        border-right: dotted #ffffff 5px;
+    }
+    .contImgGaleria {
+        margin: 25px;
+    }
+    .contGaleria article {
+        padding: 50px;
     }
 }

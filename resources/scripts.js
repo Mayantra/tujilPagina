@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Configurar el desplazamiento automático cada 5 segundos
-    let interval = setInterval(autoMove, 5000);
+    let interval = setInterval(autoMove, 10000);
 
     // Event listener para el botón de siguiente
     nextBtn.addEventListener('click', () => {
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reinicia el intervalo cuando se hace clic en los botones
     const resetInterval = () => {
         clearInterval(interval);
-        interval = setInterval(autoMove, 5000);
+        interval = setInterval(autoMove, 10000);
     };
 
     // Inicializa la posición del carrusel
