@@ -12,6 +12,9 @@
     font-family: 'lemonMildLinght';
     src: url(../fonts/lemon_milk/LEMONMILK-Light.otf);
 }
+.lemonBoldClass{
+    font-family: lemonMilBold;
+}
 
 
 body {
@@ -323,7 +326,8 @@ footer {
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
 }
-.rojoOscuro{
+
+.rojoOscuro {
     background-color: #581014;
     color: white;
 }
@@ -360,7 +364,7 @@ Generales Galeria
 }
 
 .galerias {
-    padding: 2% 5%;
+    padding: 2% 3%;
 }
 
 .fondoContGaleria {
@@ -395,7 +399,8 @@ Generales Galeria
     background-color: #E58E01;
     color: white;
 }
-.blancote{
+
+.blancote {
     background-color: white;
     color: black;
 }
@@ -411,6 +416,7 @@ Generales Galeria
 .contImgGaleria {
     transition: 1000ms;
 }
+
 .contImgGaleria:hover {
     transition: 500ms;
     transform: scale(1.1) rotate(-20deg);
@@ -447,9 +453,15 @@ Imagenes de Presentaciones
     background-image: url(../imgs/imgTalleres.jpg);
 }
 
+.imgCine {
+    
+    background-image: url(../imgs/cineWaka.JPG);
+}
+
 .contImgPresentación:hover {
     background-position-x: left;
 }
+
 
 
 
@@ -466,29 +478,22 @@ Imagenes de Presentaciones
 }
 
 .collages div {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
+
 }
 
 
 
 .collages li:last-child {
-    flex-grow: 1;
+    flex-grow: 10;
 }
-
-.collages img {
-    transition: transform 500ms, transform-origin 50ms;
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    object-position: top;
-
-}
-
 .collages img:hover {
     transform: scale(1.8);
 }
+
+
+
 
 .OtrosPatrocinadores-cont {
     margin-top: 25px;
@@ -554,25 +559,43 @@ Imagenes de Presentaciones
     text-align: justify;
 }
 
-.contNombreAutor p{
+.contNombreAutor p {
     font-style: italic;
     font-size: 20px;
     font-weight: 700;
     text-align: right;
 }
 
-.edicion2025{
+.edicion2025 {
     background-image: url(../imgs/poster2025.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
     font-family: lemonMilBold;
-    
+
 }
-.edicion2025Letras{
+
+.edicion2025Letras {
     padding: 15%;
-    background-color: rgba(0, 0, 0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+.imgPublicaciones {
+    padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgPublicaciones img {
+    height: 475px;
+    border: solid white 2px;
 }
 
 /* Medias
@@ -607,10 +630,12 @@ Imagenes de Presentaciones
         background-color: rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
-    .menuPequeno i{
+
+    .menuPequeno i {
         font-size: 30px;
     }
-    .menuPequeno p{
+
+    .menuPequeno p {
         font-size: 10px;
     }
 
@@ -840,7 +865,8 @@ Imagenes de Presentaciones
     .collages li {
         list-style: none;
         overflow: hidden;
-        height: 25vh;
+        
+        width: 100%;
         flex-grow: 1;
         border: solid white 2px;
     }
@@ -854,29 +880,42 @@ Imagenes de Presentaciones
         max-width: 30%;
         max-height: 120px;
     }
-    .contAutores{
+
+    .contAutores {
         text-align: center;
     }
-    .contAutores img{
+
+    .contAutores img {
         width: 70%;
     }
+
     .contGaleria {
         display: flex;
         flex-wrap: wrap-reverse;
         text-align: center;
         align-items: center;
     }
+
     .contGaleria img {
         border: 10px solid white;
         border-bottom: 50px solid white;
         width: 90%;
     }
+
     .contImgGaleria {
         text-align: center;
         margin: 15px;
     }
+
     .contGaleria article {
-        padding: 10px 40px;
+        padding: 10px 25px;
+    }
+
+    .collages img {
+        transition: transform 500ms, transform-origin 50ms;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: top;
     }
 }
 
@@ -905,10 +944,12 @@ Imagenes de Presentaciones
         background-color: rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
-    .menuPequeno i{
+
+    .menuPequeno i {
         font-size: 40px;
     }
-    .menuPequeno p{
+
+    .menuPequeno p {
         font-size: 15px;
     }
 
@@ -1138,7 +1179,8 @@ Imagenes de Presentaciones
     .collages li {
         list-style: none;
         overflow: hidden;
-        height: 30vh;
+        
+        width: 100%;
         flex-grow: 1;
         border: solid white 2px;
     }
@@ -1147,27 +1189,39 @@ Imagenes de Presentaciones
         max-width: 30%;
         max-height: 120px;
     }
-    .contAutores img{
+
+    .contAutores img {
         float: left;
         width: 40%;
     }
+
     .contGaleria {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         align-items: center;
     }
+
     .contGaleria img {
         border: 10px solid white;
         border-bottom: 50px solid white;
         width: 60%;
     }
+
     .contImgGaleria {
         text-align: center;
         margin: 15px;
     }
+
     .contGaleria article {
         padding: 10px 40px;
+    }
+
+    .collages img {
+        transition: transform 500ms, transform-origin 50ms;
+        max-width: 100%;
+        object-fit: contain;
+        object-position: top;
     }
 
 }
@@ -1412,7 +1466,7 @@ Imagenes de Presentaciones
     .collages li {
         list-style: none;
         overflow: hidden;
-        height: 35vh;
+        height: 40vh;
         flex-grow: 1;
         border: solid white 2px;
     }
@@ -1421,27 +1475,40 @@ Imagenes de Presentaciones
         max-width: 30%;
         max-height: 120px;
     }
-    
-    .contAutores img{
+
+    .contAutores img {
         float: left;
         width: 35%;
     }
+
     .contGaleria {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        display: flex;
+        flex-wrap: wrap-reverse;
         text-align: center;
         align-items: center;
     }
+
     .contGaleria img {
         border: 10px solid white;
         border-bottom: 50px solid white;
-        width: 100%;
+        width: 50%;
     }
+
     .contImgGaleria {
         margin: 15px;
     }
+
     .contGaleria article {
         padding: 25px;
+    }
+
+    .collages img {
+        transition: transform 500ms, transform-origin 50ms;
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        object-position: center;
+
     }
 }
 
@@ -1694,34 +1761,50 @@ Imagenes de Presentaciones
         max-width: 25%;
         max-height: 120px;
     }
+
     .contColumnasAutores {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .contAutores img{
+
+    .contAutores img {
         float: left;
         width: 35%;
     }
+
     .contGaleria {
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         align-items: center;
     }
+
     .contGaleria img {
         border: 10px solid white;
         border-bottom: 50px solid white;
-        width: 85%;
+        width: 95%;
     }
+
     .bordeDerecho {
 
         border-right: dotted #ffffff 5px;
     }
+
     .contImgGaleria {
         margin: 25px;
     }
+
     .contGaleria article {
         padding: 50px;
+    }
+
+    .collages img {
+        transition: transform 500ms, transform-origin 50ms;
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        object-position: top;
+
     }
 }
 
@@ -1983,34 +2066,50 @@ Imagenes de Presentaciones
         max-width: 15%;
         max-height: 120px;
     }
+
     .contColumnasAutores {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .contAutores img{
+
+    .contAutores img {
         float: left;
         width: 30%;
     }
+
     .contGaleria {
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         align-items: center;
     }
+
     .contGaleria img {
         border: 10px solid white;
         border-bottom: 50px solid white;
-        width: 65%;
+        width: 90%;
     }
+
     .bordeDerecho {
 
         border-right: dotted #ffffff 5px;
     }
+
     .contImgGaleria {
         margin: 25px;
     }
+
     .contGaleria article {
         padding: 50px;
+    }
+
+    
+    .collages img {
+        transition: transform 500ms, transform-origin 50ms;
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
 }
@@ -2252,7 +2351,7 @@ Imagenes de Presentaciones
     .collages li {
         list-style: none;
         overflow: hidden;
-        height: 45vh;
+        height: 60vh;
         flex-grow: 1;
         border: solid white 2px;
     }
@@ -2261,33 +2360,49 @@ Imagenes de Presentaciones
         max-width: 15%;
         max-height: 120px;
     }
+
     .contColumnasAutores {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .contAutores img{
+
+    .contAutores img {
         float: left;
         width: 30%;
     }
+
     .contGaleria {
         display: grid;
         grid-template-columns: 1fr 1fr;
         text-align: center;
         align-items: center;
     }
+
     .contGaleria img {
         border: 10px solid white;
         border-bottom: 50px solid white;
-        width: 75%;
+        width: 90%;
     }
-    .bordeDerecho {
 
+    .bordeDerecho {
         border-right: dotted #ffffff 5px;
     }
+
     .contImgGaleria {
         margin: 25px;
     }
+
     .contGaleria article {
         padding: 50px;
+    }
+    
+
+    .collages img {
+        transition: transform 500ms, transform-origin 50ms;
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        object-position: top;
+
     }
 }
